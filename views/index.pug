@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+  header
+    script(src='/javascripts/precium.js')
+  h1= title
+  p Welcome to #{title}
+
+  script.
+    initInsatnce();
