@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+#tv_notice{
+  color: #000000;
+  font-size: 40px;
+  background-color: #dddddd;
+}

@@ -4,10 +4,55 @@ block content
 
   header
     script(src='/javascripts/precium.js')
-    script(src='/node_modules/web3/src/web3.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
 
-  h1= title
-  p Welcome to #{title}
+
+  body
+    h1= title
+    p Welcome to #{title}
+    br
+
+    label#tv_notice notice.
+
+    br
+    button(
+      type='button'
+      onclick='test()'
+    ) test
+
+    br
+    button(
+    type='button'
+    onclick='connectNode()'
+    ) Connect to node
+
+    br
+    br
+    label [create Account]
+    br
+    label passwd :
+    input#input_passwd(
+    type='text'
+    width='40px'
+    )
+    button(
+    type='button'
+    onclick='initInsatnce()'
+    ) Create Wallet
+
+    br
+    br
+    label [Confirm balance]
+    br
+    label addr :
+    input#tv_addr(type='text')
+    button(
+      type='button'
+      onclick="check_balance()"
+    ) check
+    br
+    label#ll_balance please click check button after insert address.
+
 
   script.
     initInsatnce();
