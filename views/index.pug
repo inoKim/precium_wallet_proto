@@ -15,9 +15,38 @@ block content
     label#tv_notice notice.
 
     br
+    br
+    br
+    p Example addrs
+    br
+    br
+    label admin :
+    label 0x71f108f15b72f3a6f0a5c32cfc330e165a4ed50e
+    br
+    label passwd :
+    label testadd!1
+    br
+    br
+    label 1. addr :
+    label 0xe399d4d877bbedaa5f1a9e2f4fe8106c45972976
+    br
+    label passwd :
+    label DEFAULT_PASSWD
+    br
+    label 2. addr :
+    label 0xcB89fD5A04DE73e3361996f0F0eC21b9165B1641
+    br
+    label passwd :
+    label DEFAULT_PASSWD
+
+
+    br
+    br
+    br
+    br
     button(
-      type='button'
-      onclick='test()'
+    type='button'
+    onclick='test()'
     ) test
 
     br
@@ -37,7 +66,7 @@ block content
     )
     button(
     type='button'
-    onclick='initInsatnce()'
+    onclick='generateWallet()'
     ) Create Wallet
 
     br
@@ -47,12 +76,47 @@ block content
     label addr :
     input#tv_addr(type='text')
     button(
-      type='button'
-      onclick="check_balance()"
+    type='button'
+    onclick="check_balance()"
     ) check
     br
-    label#ll_balance please click check button after insert address.
+    label#ll_balance please type erc20 addr before click "check button".
+    br
+    br
+    label [Transaction]
+    br
+    label from
+    input#tv_from_addr(
+    type='text'
+    value ='0xcB89fD5A04DE73e3361996f0F0eC21b9165B1641'
 
+    )
+    label passwd
+    input#tv_from_passwd(
+    type='password'
+    value  ='DEFAULT_PASSWD')
+    br
+    label to
+    input#tv_to_addr(
+    type='text'
+    value ='0xcB89fD5A04DE73e3361996f0F0eC21b9165B1641'
+    )
+    br
+    label amount
+    input#tv_amount(
+    type='text'
+    value ='100'
+    )
+    button(
+    onclick='transaction()'
+    ) Transaction
 
-  script.
-    initInsatnce();
+    br
+    br
+    br
+    br
+    textarea#ta_history(
+    cols='100'
+    rows='30'
+    readonly=true
+    ) .

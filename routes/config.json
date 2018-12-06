@@ -1,0 +1,15 @@
+{
+  "host" : "http://localhost:3000/" ,
+  "apis" : {
+    "test" : "test",
+    "connectNode" : "connectNode",
+    "createAccount" : "createAccount",
+    "balanceCheck" : "balanceCheck",
+    "transaction" : "transaction"
+  },
+  "errors": {
+    "Success" : [ 0 , "Success"],
+    "Fail" : [-1 , "Common Error"]
+  }
+
+}
