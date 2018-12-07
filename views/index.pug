@@ -27,6 +27,16 @@ block content
     label testadd!1
     br
     br
+    labael ropsten test addr : 
+    label 0xd056A22884bC1708a2c9FD972509B769c0BeeBea
+    br
+    label privateKey :
+    label 0x380627bb29cea337445be2fe5d37471be5ebc451d5cb6d0fcc30b60bab95b416
+    br
+    
+    br
+    br
+    br
     label 1. addr :
     label 0xe399d4d877bbedaa5f1a9e2f4fe8106c45972976
     br
@@ -46,7 +56,8 @@ block content
     br
     button(
     type='button'
-    onclick='test()'
+    onclick='test2()'
+
     ) test
 
     br
@@ -79,6 +90,10 @@ block content
     type='button'
     onclick="check_balance()"
     ) check
+    button(
+    type='button'
+    onclick="check_balance_ropsten()"
+    ) check(ropsten)
     br
     label#ll_balance please type erc20 addr before click "check button".
     br
@@ -88,13 +103,13 @@ block content
     label from
     input#tv_from_addr(
     type='text'
-    value ='0xcB89fD5A04DE73e3361996f0F0eC21b9165B1641'
+    value ='0xd056A22884bC1708a2c9FD972509B769c0BeeBea'
 
     )
-    label passwd
-    input#tv_from_passwd(
+    label privatekey
+    input#tv_from_privk(
     type='password'
-    value  ='DEFAULT_PASSWD')
+    value  ='380627bb29cea337445be2fe5d37471be5ebc451d5cb6d0fcc30b60bab95b416')
     br
     label to
     input#tv_to_addr(
@@ -110,6 +125,10 @@ block content
     button(
     onclick='transaction()'
     ) Transaction
+
+    button(
+    onclick='transaction_ropsten()'
+    ) Transaction(ropsten)
 
     br
     br
