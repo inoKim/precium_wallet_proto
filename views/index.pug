@@ -23,6 +23,9 @@ block content
     label admin :
     label 0x71f108f15b72f3a6f0a5c32cfc330e165a4ed50e
     br
+    label privk :
+    label 830c77dbd384120b4cc9f368d82622bdc8ac0b2ee497badb65cb71b00fa84b52
+    br
     label passwd :
     label testadd!1
     br
@@ -103,25 +106,32 @@ block content
     label from
     input#tv_from_addr(
     type='text'
-    value ='0xd056A22884bC1708a2c9FD972509B769c0BeeBea'
+    value ='0x71f108f15b72f3a6f0a5c32cfc330e165a4ed50e'
 
     )
     label privatekey
     input#tv_from_privk(
     type='password'
-    value  ='380627bb29cea337445be2fe5d37471be5ebc451d5cb6d0fcc30b60bab95b416')
+    value  ='830c77dbd384120b4cc9f368d82622bdc8ac0b2ee497badb65cb71b00fa84b52')
     br
     label to
     input#tv_to_addr(
     type='text'
-    value ='0xcB89fD5A04DE73e3361996f0F0eC21b9165B1641'
+    value ='0xd056A22884bC1708a2c9FD972509B769c0BeeBea'
     )
     br
     label amount
     input#tv_amount(
     type='text'
-    value ='100'
+    value ='5000'
     )
+    label gas(gwei) 
+    input#tv_gasprice(
+    type='text'
+    value ='11'
+    )
+    br
+
     button(
     onclick='transaction()'
     ) Transaction

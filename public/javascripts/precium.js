@@ -91,7 +91,8 @@ function transaction_ropsten(){
                 from_addr : $('#tv_from_addr').val(),
                 from_privk: $('#tv_from_privk').val(),
                 to_addr: $('#tv_to_addr').val(),
-                amount : $('#tv_amount').val()
+                amount : $('#tv_amount').val(),
+                gasprice : $("#tv_gasprice").val()
             },
             success:function(data){
                 appendHistory("Transaction(Ropsten) hash data : 0x"+data);
@@ -109,7 +110,9 @@ function transaction(){
                 from_addr : $('#tv_from_addr').val(),
                 from_privk: $('#tv_from_privk').val(),
                 to_addr: $('#tv_to_addr').val(),
-                amount : $('#tv_amount').val()
+                amount : $('#tv_amount').val(),
+                gasprice : $("#tv_gasprice").val()
+
             },
             success:function(data){
                 appendHistory("Transaction hash data : 0x"+data);
